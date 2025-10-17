@@ -1,0 +1,26 @@
+/**
+ * El minimo común multiplo
+ * */
+fun mcd(a: Int, b: Int): Int {
+    var x = a
+    var y = b
+    while (y != 0) {
+        val resto = x % y
+        x = y
+        y = resto
+    }
+    return x
+}
+
+fun mcm(a: Int, b: Int): Int {
+    val y = a
+    val x = b 
+    return (y * x) / mcd(y, x)
+}
+
+fun main() {
+    val num1 = 125
+    val num2 = 100
+    val resultado = mcm(num1, num2)
+    println("El MCM de $num1 y $num2 es: $resultado ")
+}
