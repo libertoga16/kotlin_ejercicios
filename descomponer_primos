@@ -1,0 +1,21 @@
+fun descomponerEnPrimos(n: Int): List<Int> {
+    var numero = n
+    val factores = mutableListOf<Int>()
+    var divisor = 2
+
+    while (numero > 1) {
+        while (numero % divisor == 0) {  
+            factores.add(divisor)        
+            numero /= divisor            
+        }
+        divisor++                       
+    }
+
+    return factores
+}
+
+fun main() {
+    val numero = 84
+    val factores = descomponerEnPrimos(numero)
+    println("Los factores primos de $numero son: $factores")
+}
