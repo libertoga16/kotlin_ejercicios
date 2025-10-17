@@ -1,0 +1,27 @@
+fun esPrimo(n: Int): Boolean {
+    if (n <= 1) return false
+    for (i in 2 until n) {
+        if (n % i == 0) return false
+    }
+    return true
+}
+
+fun generarPrimos(cantidad: Int): List<Int> {
+    val primos = mutableListOf<Int>()
+    var numero = 2
+
+    while (primos.size < cantidad) {
+        if (esPrimo(numero)) {
+            primos.add(numero)
+        }
+        numero++
+    }
+
+    return primos
+}
+
+fun main() {
+    val cantidad = 10
+    val primos = generarPrimos(cantidad)
+    println("Los primeros $cantidad números primos son: $primos")
+}
