@@ -1,0 +1,17 @@
+/**
+ * Creo un factorial 
+ * **/
+fun factorial(n: Int): Long {
+    require(n >= 0) { "El número debe ser no negativo" }
+    var resultado = 1L
+    for (i in 1..n) {
+        resultado *= i
+    }
+    return resultado
+}
+
+fun main() {
+    println("Introduce un número entero(va ha ser 5):")
+    val numero = 5;
+    println("El factorial de $numero es: ${factorial(numero)}")
+}
