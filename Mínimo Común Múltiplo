@@ -1,5 +1,5 @@
 /**
- * El minimo común multiplo
+ * El mínimo común múltiplo
  * */
 fun mcd(a: Int, b: Int): Int {
     var x = a
